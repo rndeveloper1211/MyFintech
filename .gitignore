@@ -1,0 +1,110 @@
+####################################
+# OS Files
+####################################
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+
+####################################
+# Xcode / iOS (IGNORE on Windows)
+####################################
+
+# 🔴 Windows user ho to iOS poora ignore karo
+ios/
+
+# (Agar future me Mac pe kaam karoge, tab ye remove kar sakte ho)
+
+
+####################################
+# Android / IntelliJ / Gradle
+####################################
+
+# Android build
+android/app/build/
+android/build/
+
+# IntelliJ / Android Studio
+.idea/
+*.iml
+
+# Gradle
+.gradle/
+local.properties
+.cxx/
+
+# Keystore (security)
+*.keystore
+!debug.keystore
+
+# Heap dumps
+*.hprof
+
+
+####################################
+# Node.js
+####################################
+
+node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+
+####################################
+# React Native
+####################################
+
+# Metro
+.metro-health-check*
+
+# JS bundles
+*.jsbundle
+
+# Hermes
+*.hbc
+
+
+####################################
+# Testing
+####################################
+
+coverage/
+
+
+####################################
+# Fastlane
+####################################
+
+**/fastlane/report.xml
+**/fastlane/Preview.html
+**/fastlane/screenshots
+**/fastlane/test_output
+
+
+####################################
+# Ruby / CocoaPods
+####################################
+
+vendor/bundle/
+
+
+####################################
+# Logs
+####################################
+
+*.log
+
+
+####################################
+# Archives / Extra
+####################################
+
+src.zip
+*.zip
+*.tar
+*.tar.gz
