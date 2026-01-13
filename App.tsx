@@ -12,6 +12,8 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import RootNavigator from './src/Navigators/RootNavigator';
 import { NavigationContainer } from '@react-navigation/native';
+import { Provider } from 'react-redux';
+import store from './src/redux/store';
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -19,15 +21,16 @@ function App(): React.JSX.Element {
   return (
     // style={{flex: 1}} is MANDATORY here for the app to show up
     <GestureHandlerRootView style={{ flex: 1 }}>
+      <Provider store={store} >
+        <NavigationContainer>
 
-      <NavigationContainer>
-    
-      <SafeAreaView style={{ flex: 1, backgroundColor: isDarkMode ? Colors.darker : Colors.lighter }}>
-        
-       <RootNavigator/>
+          <SafeAreaView style={{ flex: 1, backgroundColor: isDarkMode ? Colors.darker : Colors.lighter }}>
 
-      </SafeAreaView>
-          </NavigationContainer>
+            <RootNavigator />
+
+          </SafeAreaView>
+        </NavigationContainer>
+      </Provider>
     </GestureHandlerRootView>
   );
 }

@@ -13,8 +13,13 @@ import Animated, {
 import Overlay from './Components/Overlay';
 import Drawer from '../Drawer/Drawer';
 import WalletCard from './Components/walletCard';
+import { useSelector } from 'react-redux';
+
 
 function HomeScreen() {
+
+  const colors = useSelector((state: RootStat   e) => state.theme.colors);
+
   const active = useSharedValue(false);
   const progess = useDerivedValue(() => {
     return withTiming(active.value ? 1 : 0)
